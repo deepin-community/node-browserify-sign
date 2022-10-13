@@ -1,0 +1,45 @@
+Source: node-browserify-sign
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-bn.js <!nocheck>
+ , node-browserify-rsa <!nocheck>
+ , node-create-hash <!nocheck>
+ , node-create-hmac <!nocheck>
+ , node-elliptic <!nocheck>
+ , node-inherits <!nocheck>
+ , node-parse-asn1 <!nocheck>
+ , node-readable-stream <!nocheck>
+ , node-safe-buffer <!nocheck>
+ , node-tape <!nocheck>
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/js-team/node-browserify-sign
+Vcs-Git: https://salsa.debian.org/js-team/node-browserify-sign.git
+Homepage: https://github.com/crypto-browserify/browserify-sign
+Rules-Requires-Root: no
+
+Package: node-browserify-sign
+Architecture: all
+Depends: ${misc:Depends}
+ , node-bn.js
+ , node-browserify-rsa
+ , node-create-hash
+ , node-create-hmac
+ , node-elliptic
+ , node-inherits
+ , node-parse-asn1
+ , node-readable-stream
+ , node-safe-buffer
+Description: adds node crypto signing for browsers
+ This library adds node crypto signing for browsers.
+ .
+ This library is a dependency for webpack. Webpack takes code targeted at
+ node.js and makes it run in the browser. Node.js comes with API of its own
+ that is not available in the browsers. Webpack exposes this code
+ to programs that are unaware they are running in a browser.
+ .
+ Node.js is an event-based server-side JavaScript engine.
